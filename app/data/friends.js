@@ -7,11 +7,28 @@ var friends = [
             1,
             4,
             4,
+            5
+        ]
+    },
+    {
+        name: "Kant",
+        photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Kant_gemaelde_3.jpg/220px-Kant_gemaelde_3.jpg",
+        scores: [
+            5,
             5,
             1,
-            2,
+            1,
+            4
+        ]
+    },
+    {
+        name: "Mill (Utilitarianism)",
+        photo: "https://www.st-andrews.ac.uk/~mnat/~ball0888/oxfordopen/02.jpg",
+        scores: [
+            1,
+            1,
             5,
-            4,
+            5,
             1
         ]
     }

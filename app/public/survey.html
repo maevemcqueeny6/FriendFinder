@@ -19,9 +19,9 @@
 
         <div class="jumbotron">
             <h1 class="text-center">
-                <span class="fa fa-fire"></span> Survey Page Pending</h1>
+                <span class="fa fa-fire"></span> Survey</h1>
             <hr>
-            <h2 class="text-center">Survey Page Pending</h2>
+            <h2 class="text-center">Find your best friend.</h2>
             <br>
         </div>
         <div class="row">
@@ -39,76 +39,171 @@
                             </div>
                             <div class="form-group">
                                 <label for="reserve-phone">Phone Link to Photo Image</label>
-                                <input type="text" class="form-control" id="image">
+                                <input type="text" class="form-control" id="photo">
                             </div>
 
                             <!-- quiz -->
-                            
+                            <!-- Q1 -->
                             <div class="form-group">
-                                <label for="reserve-email">Email</label>
-                                <input type="text" class="form-control" id="reserve-email">
+                                Answer the below to the best of your ability. 1 = Strongly Disagree and 5 = Strongly
+                                Agree.
                             </div>
                             <div class="form-group">
-                                <label for="reserve-unique-id">Unique ID</label>
-                                <input type="text" class="form-control" id="reserve-unique-id">
+                                <label for="question1">You feel a strong sense of duty.</label>
+                                <select class="browser-default" id="question1">
+                                    <option value="empty"></option>
+                                    <option value="1">1 Strongly Disagree</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3 Not sure. </option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 Strongly Agree</option>
+                                </select>
                             </div>
+                            <div class="form-group">
+                                <label for="question2">You want to do whats right because its the right thing to
+                                    do.</label>
+                                <select class="browser-default" id="question2">
+                                    <option value="empty"></option>
+                                    <option value="1">1 Strongly Disagree</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3 Not sure.</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 Strongly Agree</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="question3">You feel a strong sense of consequence.</label>
+                                <select class="browser-default" id="question3">
+                                    <option value="empty"></option>
+                                    <option value="1">1 Strongly Disagree</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3 Not sure.</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 Strongly Agree</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="question4">You do what's right because it leads to better
+                                    consequences.</label>
+                                <select class="browser-default" id="question4">
+                                    <option value="empty"></option>
+                                    <option value="1">1 Strongly Disagree</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3 Not sure.</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 Strongly Agree</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="question5">a serial murderer is at your door and has asked where your
+                                    children are so that the murderer can murder them. Do you lie? (Keep in mind:
+                                    Treating the murderer as a means rather than an end denies the murderer to be a
+                                    rational agent, and if one were to deny that the murderer is a rational agent, the
+                                    murderer could therefore not have free will, because this denies the murderer the
+                                    ability to rationally choose an action based on accurate information. By lying you
+                                    are restricting the person being lied to's ability to free rational action, and
+                                    therefore lying is directly contradicting the good of treating everyone as an end
+                                    and as a rational agent, making it therefore wrong to lie.) </label>
+                                <select class="browser-default" id="question5">
+                                    <option value="empty"></option>
+                                    <option value="1">1 Strongly Disagree</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3 Not sure.</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 Strongly Agree</option>
+                                </select>
+                            </div>
+                            <!-- Submit -->
                             <button type="submit" class="btn btn-primary submit">Submit</button>
                         </form>
                     </div>
                 </div>
+            </div>
+            <div id="bestFriendModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h3 class="modal-title">Your New Best Friend</h1>
+                        </div>
+                        <div class="modal-body">
+                            <h2 id="bestFriend"></h2>
+                            <img id="bestFriendPhoto" src="#">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal would go here -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4>Your match!</h4>
+                <h5 id="matchName"></h5>
+                <img id="matchPic" src="" alt="No Image" width=250px>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Done</a>
             </div>
         </div>
 
 
         <footer class="footer">
             <div class="container">
-                <p>
-                    <a href="/api/tables">API Table Link</a> |
-                    <a href="/api/waitlist">API Wait List</a>
-            </div>
-        </footer>
+              <p><a href="https://github.com/maevemcqueeny6/FriendFinder">Github Repo</a> | <a href="/api/friends">Friends List</a>
+      
+              </div>
+          </footer>
 
     </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </body>
 
 </html>
 
-<!-- BELOW CODE IS CRITICAL. IT HANDLES HOW FORM DATA IS SENT TO OUR SERVER -->
 <script type="text/javascript">
-    $(".submit").on("click", function (event) {
-        event.preventDefault();
+    $(document).ready(function () {
+        $(".submit").on("click", function (event) {
+            event.preventDefault();
+            // Form validation
+            var valid = true;
+            if ($("#name").val() === "" || $("#photo").val() === "") {
+                valid = false;
+            } else if ($("#question1").val() === "empty" || $("#question2").val() === "empty" || $("#question3").val() === "empty" || $("#question4").val() === "empty" || $("#question5").val() === "empty") {
+                valid = false;
+            }
 
-        // Here we grab the form elements
-        var newFriend = {
-            name: $("#name").val().trim(),
-            photo: $("#imagephone").val().trim(),
-            survey: $("#reserve-email").val().trim(),
-        };
+            if (valid === true) {
+                var newUser = {
+                    name: $("#name").val().trim(),
+                    photo: $("#photo").val().trim(),
+                    scores: [
+                        $("#question1").val(),
+                        $("#question2").val(),
+                        $("#question3").val(),
+                        $("#question4").val(),
+                        $("#question5").val(),
+                    ]
+                };
+                var currentURL = window.location.origin;
+                // Ajax call for receiving response after POST req
+                $.post(currentURL + "/api/friends", newUser, function(data) {
+                    console.log("string", data);
+                //Grab the result from the AJAX post so that the best match's name and photo are displayed.
+                $("#matchName").text(data.name);
+                $("#matchPic").attr("src", data.photo);
+                });
 
-        console.log(newFriend);
+                $('.modal').modal();
 
-        // $.post("/api/tables", newFriend,
-        //     function (data) {
+            } else {
+                // If a required field is missing, show alert
+                alert("Survey is incomplete!");
+            }
 
-        //         // If a table is available... tell user they are booked.
-        //         if (data) {
-        //             alert("Yay! You are officially booked!");
-        //         }
-
-        //         // If a table is available... tell user they on the waiting list.
-        //         else {
-        //             alert("Sorry you are on the wait list");
-        //         }
-
-                // Clear the form when submitting
-                $("#reserve-name").val("");
-                $("#reserve-phone").val("");
-                $("#reserve-email").val("");
-                $("#reserve-unique-id").val("");
-
-            });
-
-    // });
+        });
+    });
 
 </script>
