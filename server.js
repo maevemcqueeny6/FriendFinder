@@ -1,5 +1,6 @@
 
 var express = require("express");
+var bodyParser = require("body-parser");
 
 // Tells node that we are creating an "express" server
 var app = express();
@@ -9,8 +10,8 @@ var app = express();
 var PORT = process.env.PORT || 8080;
 
 // Sets up the Express app to handle data parsing
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 // ================================================================================
 // ROUTER
